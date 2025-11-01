@@ -6,7 +6,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+// import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** FlutterMyPickerPlugin */
 public class FlutterMyPickerPlugin: FlutterPlugin, MethodCallHandler {
@@ -24,13 +24,13 @@ public class FlutterMyPickerPlugin: FlutterPlugin, MethodCallHandler {
   // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
   // depending on the user's project. onAttachedToEngine or registerWith must both be defined
   // in the same class.
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "flutter_my_picker")
-      channel.setMethodCallHandler(FlutterMyPickerPlugin())
-    }
-  }
+  // companion object {
+  //   @JvmStatic
+  //   fun registerWith(registrar: Registrar) {
+  //     val channel = MethodChannel(registrar.messenger(), "flutter_my_picker")
+  //     channel.setMethodCallHandler(FlutterMyPickerPlugin())
+  //   }
+  // }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     if (call.method == "getPlatformVersion") {
